@@ -5,7 +5,7 @@ let io = require('socket.io')(server);
 io.on('connection', (socket) => {
  
   socket.on('registrar-ocorrencia', (vals) =>{
-    let data = {
+    /* let data = {
       id: vals.id,
       title: vals.titulo,
       desc: vals.descricao,
@@ -17,8 +17,8 @@ io.on('connection', (socket) => {
       latitude: vals.lat,
       longitude: vals.long,
       prioridade: vals.prioridade
-    };
-    io.emit('apontar-ocorrencia', data);
+    }; */
+    io.emit('apontar-ocorrencia', vals);
   });
 });
  
