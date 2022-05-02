@@ -5,20 +5,11 @@ let io = require('socket.io')(server);
 io.on('connection', (socket) => {
  
   socket.on('registrar-ocorrencia', (vals) =>{
-    /* let data = {
-      id: vals.id,
-      title: vals.titulo,
-      desc: vals.descricao,
-      data_ocorrencia: vals.ocorrencia,
-      img: vals.img,
-      localidade: vals.localidade,
-      timer: vals.timer,
-      icon: vals.icone,
-      latitude: vals.lat,
-      longitude: vals.long,
-      prioridade: vals.prioridade
-    }; */
     io.emit('apontar-ocorrencia', vals);
+  });
+
+  socket.on('registrar-ocorrencia-animal', (vals) =>{
+    io.emit('apontar-ocorrencia-animal', vals);
   });
 });
  
