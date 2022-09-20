@@ -11,6 +11,12 @@ io.on('connection', (socket) => {
   socket.on('registrar-ocorrencia-animal', (vals) =>{
     io.emit('apontar-ocorrencia-animal', vals);
   });
+
+  socket.on('registrar-evento', (vals) =>{
+    io.emit('apontar-evento', vals);
+  });
+
+
 });
  
 var port = process.env.PORT || 3001;
