@@ -15,11 +15,6 @@ io.on('connection', (socket) => {
   socket.on('registrar-evento', (vals) =>{
     io.emit('apontar-evento', vals);
   });
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 8ae24988618b240be36fa5795440c754ca836bb2
 });
 var port = process.env.PORT || 3001;
  
