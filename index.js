@@ -1,6 +1,6 @@
 let app = require('express')();
 let server = require('http').createServer(app);
-let io = require('socket.io')(server);
+let io = require('socket.io')(server, {cors: {origin: "*"}});
  
 io.on('connection', (socket) => {
  
